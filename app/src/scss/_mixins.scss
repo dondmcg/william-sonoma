@@ -1,0 +1,5 @@
+@mixin btn-theme($btn-color) {
+   @extend %btn;
+   background-color: $btn-color;
+   color: #ffffff;
+}

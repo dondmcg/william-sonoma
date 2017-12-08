@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>William Sonoma</title>
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/main.css"/>
+</head>
+
+<body>
+  <div class="header-brand-logo">
+    <img src="images/logo.jpg"/>
+  </div>
+
+  <nav class="navbar navbar-toggleable-md navbar-dark navbar-light ws-navbar-bg">
+  <button class="navbar-toggler navbar-toggler-right ws-navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ws-navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Cookware</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Cooks Tools</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Cutlery</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Electronics</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Bakeware</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Food</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Tabletop & Bar</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Homekeeping</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Outdoor</a>
+      </li>
+      <li class="nav-item">
+        <a  class="nav-link" href="">Sale</a>
+      </li>
+      <li  class="nav-item ws-navbar-brandname">
+        <a  class="nav-link" href="">William-Sonoma Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <ul class="breadcrumbs">
+    <li><a href="">Home</a></li>
+    <li><a href="">Homekeeping</a></li>
+    <li><a href="">Aprons</a></li>
+    <li><a href="">Adult Aprons</a></li>
+    <li><a href="">William Sonoma Classic Apron, French Blue</a></li>
+  </ul>
+  <div class="row">
+    <div class="col-lg-7 col-left">
+      <section class="hero-cont" id="hero_cont">
+        <img id="hero_fade" class="hero-fade" />
+        <img alt="Williams Sonoma Classic Apron, French Blue" src="https://www.williams-sonoma.com/wsimgs/rk/images/dp/wcm/201748/0020/img58o.jpg" height="574" width="459" id="hero" class="hero">
+      </section>
+      <div class="product-thumbs"><!-- placeholder for thumbs created in product.js --></div>
+    </div>
+    <div class="col-lg-5 col-right">
+      <h3>William-Sonoma Classic Apron, French Blue</h3>
+      <p>A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color.  Sewn of thick cotton, it can be personalized or monogrammed with up to nine characters, all the same hieght, embroidered in your choice of color.  An apron of this quality makes a welcome gift for any cook.
+        <ul>
+          <li>Durable 100% cotton construction.</li>
+          <li>Adjustable neckband ensures a good fit.</li>
+          <li>Roomy front pockets hold small tools.</li>
+          <li>Machine-wash.</li>
+        </ul>
+        <p>
+        <div class="product-page-price">
+        $19.95
+        </div>
+        <fieldset class="product-quantity">
+          <input class="product-page-qty" aria-label="Quantity" type="number" pattern="[0-9]*" min="0" max="99" maxlength="2" placeholder="QTY" value="">
+        </fieldset>
+        <div class="addcart-container">
+          <div class="addcart-options">
+            <fieldset class="add-to-cart">
+              <button aria-label="Add to Cart" class="btn-add2cart" id="btn_add2cart"><span>Add to Cart</span><i class="fa fa-caret-right btn-add2cart-caret"></i></button>
+            </fieldset>
+          </div>
+          <div class="cart-alert unclicked" id="cart_alert">This is an important message! You must read before proceeding to your cart.<i class="fa fa-times cart-alert-close"></i></div>
+        </div>
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link"><i class="fa fa-caret-right"></i><span>Collapsed</span></div>
+            <div class="accordian-content">
+              This section is expanded.  This section can be collapsed by clickiing on the "Expanded" text.  This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.
+            </div>
+          </li>
+          <li>
+            <div class="link"><i class="fa fa-caret-right"></i><span>Collapsed</spasn></div>
+            <div class="accordian-content">
+              This section is expanded.  This section can be collapsed by clickiing on the "Expanded" text.  This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.
+            </div>
+          </li>
+          <li>
+            <div class="link"><i class="fa fa-caret-right"></i><span>Collapsed</span></div>
+            <div class="accordian-content">
+              This section is expanded.  This section can be collapsed by clickiing on the "Expanded" text.  This section is expanded.  This section can be collapsed by clicking on the "Expanded" text.
+            </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  &copy; William-Sonoma Inc. All Rights Reserved | Terms and Conditions <span class="ws-text-important">(Updated March 2016) | <a href="">Privacy</a> | <a href="">Legal Statement</a>
+</div>
+
+<script src="scripts/jquery.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="scripts/bootstrap.min.js" async="true"></script>
+<script src="scripts/product.js" async="true"></script>
+</body>
+</html>
