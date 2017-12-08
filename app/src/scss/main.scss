@@ -166,17 +166,19 @@ body {
 .product-quantity input{
   padding-left: 6px;
 }
+
+@media (min-width: 576px) {
+  .container {
+    width: 100%;
+  }
+}
+
 @media ( min-width: 992px ) {
   .container {
     width: 1140px;
   }
   .col-right {
     margin-top: 0;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    width: 100%;
   }
 }
 /* end product only styles */
