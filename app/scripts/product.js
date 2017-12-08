@@ -33,8 +33,6 @@
       for(var productIndex in productVariations.products) {
         // create thumbs
         addLoadEvent(buildThumbs(productIndex));
-        // create heros
-        buildHeros(productIndex);
       };
 
       // add eventlisterners
@@ -58,13 +56,28 @@
     var buildThumbs = function(productIndex) {
       var thumbClass = (productIndex == 0)?'thumb active': 'thumb';
 
+			var imgHeight = productVariations.products[productIndex].width;
+			var imgWidth = productVariations.products[productIndex].height;
+			var thumbHeight, thumbWidth;
+
+			if(imgHeight > imgWidth) {
+				thumbWidth = '90px';
+				thumbHeight = 'auto';
+			}else if (imgHeight < imgWidth) {
+				thumbWidth = 'auto';
+				thumbHeight = '90px';
+			}else if (imgHeight == imgWidth) {
+				thumbWidth = '90px';
+				thumbHeight = '90px';
+			}
+
       $thumbsCont.append(
         $('<div>').append(
           $('<img>').attr({
             "src": productVariations.products[productIndex].url,
             "alt": productVariations.products[productIndex].alt,
-            "width": "90px",
-            "height": "90px"
+            "width": thumbWidth,
+            "height": thumbHeight
           })
         ).addClass(thumbClass)
       );
