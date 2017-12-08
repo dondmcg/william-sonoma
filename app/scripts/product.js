@@ -129,10 +129,12 @@ $(function() {
       })
 
       $cartBtn.on('click', function(){
-        $cartAlert.toggleClass('clicked unclicked')
+        $cartAlert.toggleClass('clicked unclicked');
+				$('.addcart-container').css('overflow', 'visible');
       });
       $cartAlert.on('click', function(){
         $cartAlert.toggleClass('clicked unclicked');
+				$('.addcart-container').css('overflow', 'hidden');
       });
     }
 
