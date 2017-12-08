@@ -1,31 +1,3 @@
-// Accordian plugin
-$(function() {
-	var Accordion = function(el, multiple) {
-		this.el = el || {};
-		this.multiple = multiple || false;
-
-		// Variables privadas
-		var links = this.el.find('.link');
-		// Evento
-		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-	}
-
-	Accordion.prototype.dropdown = function(e) {
-		var $el = e.data.el;
-			$this = $(this),
-			$next = $this.next();
-
-		$next.slideToggle();
-		$this.parent().toggleClass('open');
-
-		if (!e.data.multiple) {
-			$el.find('.accordian-content').not($next).slideUp().parent().removeClass('open');
-		};
-	}
-
-	var accordion = new Accordion($('#accordion'), false);
-});
-
 // Product image selector
 (function() {
 
@@ -83,13 +55,6 @@ $(function() {
     	}
     }
 
-    // var preloadImages = function(products) {
-    //   for(var productIndex in products) {
-    //     var img = new Image();
-    //     img.src = products[productIndex].url;
-    //   }
-    // }
-
     var buildThumbs = function(productIndex) {
       var thumbClass = (productIndex == 0)?'thumb active': 'thumb';
 
@@ -103,15 +68,6 @@ $(function() {
           })
         ).addClass(thumbClass)
       );
-    }
-
-    var buildHeros = function(productIndex) {
-      // $heroCont.append(
-      //   $('<img>').attr({
-      //     "src": productVariations.products[productIndex].url,
-      //     "alt": productVariations.products[productIndex].alt
-      //   }).addClass('hero' + productIndex)
-      // );
     }
 
     var attachEventListeners = function() {
