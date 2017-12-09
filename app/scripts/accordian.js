@@ -1,27 +1,27 @@
 // Accordian plugin
 $(function() {
-	var Accordion = function(el, multiple) {
-		this.el = el || {};
-		this.multiple = multiple || false;
+  
+  'use strict';
 
-		// Variables privadas
-		var links = this.el.find('.link');
-		// Evento
-		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
-	}
+  // reusable jquery elements
+  var $accordians = $('#accordion .accordian-wrap'),
+    $allcontent = $('#accordion .accordian-content');
 
-	Accordion.prototype.dropdown = function(e) {
-		var $el = e.data.el;
-			$this = $(this),
-			$next = $this.next();
+  var close_accordion_section = function() {
+        $accordians.removeClass('open');
+        $allcontent.slideUp(300);
+  }
 
-		$next.slideToggle();
-		$this.parent().toggleClass('open');
-
-		if (!e.data.multiple) {
-			$el.find('.accordian-content').not($next).slideUp().parent().removeClass('open');
-		};
-	}
-
-	var accordion = new Accordion($('#accordion'), false);
+  $accordians.on('click', function(e){
+        var $self = $(this), $parent = $self.parent(), $content = $self.find('.accordian-content');
+        if($self.hasClass('open')) {
+          close_accordion_section();
+        }else {
+            close_accordion_section();
+            // Add open class to section title
+            $self.addClass('open');
+            // Open up the hidden content panel
+            $content.slideDown(300);
+        }
+    });
 });

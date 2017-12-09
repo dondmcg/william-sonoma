@@ -3,7 +3,7 @@
 
     'use strict';
 
-    window.WilliamSonomaEcommerce = {};
+		window.WilliamSonomaEcommerce = {};
 
     // reusable jquery elements
     var $thumbImg = $('.thumb img'),
@@ -16,8 +16,6 @@
     // other Variables
     var imageObj = new Image();
     var preImgs = new Array();
-
-    // Constants
 
     // Pre-cached, re-usable jQuery objects
     var productVariations =  {products:[
@@ -35,7 +33,7 @@
         addLoadEvent(buildThumbs(productIndex));
       };
 
-      // add eventlisterners
+      // add eventlisteners
       attachEventListeners();
     }
 
@@ -52,13 +50,12 @@
     		}
     	}
     }
-
+		// check width and height of thumbs and build them
     var buildThumbs = function(productIndex) {
-      var thumbClass = (productIndex == 0)?'thumb active': 'thumb';
-
-			var imgHeight = productVariations.products[productIndex].width;
-			var imgWidth = productVariations.products[productIndex].height;
-			var thumbHeight, thumbWidth;
+      var thumbClass = (productIndex == 0)?'thumb active': 'thumb',
+				imgHeight = productVariations.products[productIndex].width,
+				imgWidth = productVariations.products[productIndex].height,
+				thumbHeight, thumbWidth;
 
 			if(imgHeight > imgWidth) {
 				thumbWidth = '90px';
@@ -87,7 +84,6 @@
       var $thumbs = $('.product-thumbs .thumb');
       $thumbs.on('click', function(){
         var $self = $(this), indx = $self.index();
-        console.log($thumbs);
         $thumbs.removeClass('active');
         $self.addClass('active');
         $heroFade.attr('src', $heroImg.attr('src')).show();
@@ -116,5 +112,6 @@
         productVariations: productVariations
     };
 
+		WilliamSonomaEcommerce.productImageSelector.init();
+
 })();
-WilliamSonomaEcommerce.productImageSelector.init();
